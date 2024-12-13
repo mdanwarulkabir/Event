@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="?attr/selectableItemBackground"> <!-- Added selectable background -->
+
+    <!-- Left side with Event details -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Event Name -->
+        <TextView
+            android:id="@+id/event_name_input498"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Name"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black" /> <!-- Added text color -->
+
+        <!-- Event Date -->
+        <TextView
+            android:id="@+id/event_date_input498"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/black" /> <!-- Added text color -->
+
+        <!-- Event Description -->
+        <TextView
+            android:id="@+id/event_description_input498"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="14sp"
+            android:textColor="@color/black" /> <!-- Added text color -->
+    </LinearLayout>
+
+    <!-- Right side with Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/edit_event_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_edit"
+            android:contentDescription="Edit Event"
+            android:background="?android:attr/selectableItemBackground"
+            android:tint="@color/colorPrimary"
+        android:layout_marginBottom="8dp" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/delete_event_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="Delete Event"
+            android:background="?android:attr/selectableItemBackground"
+            android:tint="@color/colorPrimary" />
+    </LinearLayout>
+
+</LinearLayout>

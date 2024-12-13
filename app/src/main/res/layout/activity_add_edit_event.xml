@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Event Name Input -->
+    <EditText
+        android:id="@+id/event_name_input498"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Name"
+        android:importantForAccessibility="yes"
+        android:nextFocusForward="@id/event_date_input498"
+        android:focusable="true"
+        android:clickable="false" />
+
+    <!-- Event Date Input -->
+    <EditText
+        android:id="@+id/event_date_input498"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Date (YYYY-MM-DD)"
+        android:importantForAccessibility="yes"
+        android:focusable="true"
+        android:clickable="false"
+        android:nextFocusForward="@id/event_description_input498" />
+
+    <!-- Event Description Input -->
+    <EditText
+        android:id="@+id/event_description_input498"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Description"
+        android:importantForAccessibility="yes"
+        android:nextFocusForward="@id/save_event_button498" />
+
+    <!-- Save Event Button -->
+    <Button
+        android:id="@+id/save_event_button498"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Event"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="yes" />
+</LinearLayout>

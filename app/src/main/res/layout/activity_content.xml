@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContentActivity">
+
+    <!-- Welcome TextView for displaying the current user -->
+    <TextView
+        android:id="@+id/welcome_text_view498"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- RecyclerView for listing events -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/event_recyclerview498"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text_view498"
+        app:layout_constraintBottom_toTopOf="@id/search_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Empty state TextView when no events are present -->
+    <TextView
+        android:id="@+id/empty_text_view498"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No events yet! Click the '+' button to create one."
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text_view498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone" />
+
+    <!-- Search Container -->
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logout_text_view"
+        app:layout_constraintEnd_toStartOf="@id/add_event_button498"
+        app:layout_constraintTop_toBottomOf="@id/event_recyclerview498"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp">
+
+        <!-- Search EditText -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search events"
+            android:inputType="text" />
+
+        <!-- Search Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            android:contentDescription="Search" />
+    </LinearLayout>
+
+    <!-- Empty state Icon when no events are present -->
+    <ImageView
+        android:id="@+id/empty_icon498"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_empty_event"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/welcome_text_view498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- Logout FloatingActionButton -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/logout_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Logout"
+        android:src="@drawable/logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- FloatingActionButton for adding new events -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_event_button498"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Add Event"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

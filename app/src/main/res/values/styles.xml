@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Custom ActionBar Title Style -->
+    <style name="CustomActionBarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item> <!-- White Text -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Custom ActionBar Style -->
+    <style name="CustomActionBarStyle" parent="Widget.Material3.ActionBar.Solid">
+        <item name="android:background">#2196F3</item> <!-- Material Blue -->
+        <item name="android:titleTextStyle">@style/CustomActionBarTitle</item>
+    </style>
+
+</resources>
